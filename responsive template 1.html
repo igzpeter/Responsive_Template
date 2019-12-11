@@ -1,0 +1,269 @@
+<style>
+.container {
+    display: grid;
+    grid-gap: 5px;    
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 880px 400px 100px;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "m m c c c c c c c c c c"
+        "f f f f f f f f f f f f";
+}
+
+@media screen and (max-width: 1140px) {
+    .container {
+        grid-template-rows: 350px 400px 100px;
+
+        grid-template-areas:
+            "m m m m m m h h h h h h"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+@media screen and (max-width: 1040px) {
+    .container {
+        grid-template-rows: 310px 400px 100px;
+
+        grid-template-areas:
+            "m m m m m m h h h h h h"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .container {
+        grid-template-rows: 280px 400px 100px;
+
+        grid-template-areas:
+            "m m m m m m h h h h h h"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .container {
+        grid-template-rows: 250px 400px 100px;
+
+        grid-template-areas:
+            "m m m m m m h h h h h h"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+
+
+@media screen and (max-width: 740px) {
+    .container {
+        grid-template-rows: 420px 400px 100px;
+
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m m c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+@media screen and (max-width: 640px) {
+    .container {
+        grid-template-rows: 360px 400px 100px;
+
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m m c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+@media screen and (max-width: 540px) {
+    .container {
+        grid-template-rows: 300px 400px 100px;
+
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m m c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+
+
+
+@media screen and (max-width: 440px) {
+    .container {
+        grid-template-rows: 240px 200px 1000px 100px;
+
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m m m m m m m m m m m"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .container {
+        grid-template-rows: 180px 200px 500px 100px;
+
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m m m m m m m m m m m"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+
+@media screen and (max-width: 240px) {
+    .container {
+        grid-template-rows: 120px 200px 1000px 100px;
+
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m m m m m m m m m m m"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
+
+
+
+
+.header {
+    grid-area: h;
+    background-color:rgb(0, 0, 0);
+    height: auto;
+    margin-top:5px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+
+
+}
+.menu {
+    grid-area: m;
+    background-color:rgb(209, 237, 238);
+    margin-top:5px;
+    margin-left: 5px;
+
+
+}
+
+
+#content_menu {
+    padding:10px;
+    display: flex;
+    flex-direction:column;
+    height: auto;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    
+
+}
+
+.content {
+    grid-area: c;
+    background-color:rgb(7, 63, 73);
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top:5px;
+    color:white;
+
+}
+
+
+.footer {
+   grid-area: f;
+   background-color:rgb(7, 63, 73);
+   margin-left: 5px;
+   margin-right: 5px;
+   margin-bottom: 5px;
+   color:white;
+
+}
+
+
+
+#container_header{
+    display: flex;
+    flex-direction:column;
+   
+}
+#container_video{
+    height:auto;
+}
+#myVideo {
+width:100%;
+ height: auto;
+}
+
+
+
+#myBtn {
+  
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  height:auto;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+</style>
+
+
+<div class="container">
+   <!--header--> <div class="header">
+
+
+    <!--container video--><div id="container_header">
+        <div id="container_video">
+             <video autoplay muted loop id="myVideo">
+                    <source src="mp4_9.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                    </video>
+        </div>
+        <div>
+            <button id="myBtn" onclick="myFunction_2()" style="font-size:2vw;">Pause</button>
+        </div>
+                   
+    </div><!--fin container header-->
+
+
+    </div><!--fin header-->
+    <div class="menu">
+        
+        <div id="content_menu">
+            MENU      
+        </div><!--fin content menu-->
+    </div><!--fin menu-->
+
+
+    <div class="content">CONTENT</div>
+    <div class="footer">FOOTER</div>
+  </div>
+
+
+  
+        <!--video_script-->
+<script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+        
+        function myFunction_2() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+        }
+        </script>
+
+
+<!--fin video_script-->
